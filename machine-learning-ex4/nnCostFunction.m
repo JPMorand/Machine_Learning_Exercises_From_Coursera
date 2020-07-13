@@ -87,8 +87,8 @@ J = J + reg;
 
 %================= Part 2 =====================
 delta_3 = a3 - y_m;
-teste = delta_3*Theta2;
-delta_2 = teste(:, 2:end).*sigmoidGradient(a1*Theta1');
+intCalc = delta_3*Theta2;
+delta_2 = intCalc(:, 2:end).*sigmoidGradient(a1*Theta1');
 
 Theta2_grad = (1/m)*(delta_3'*a2);
 Theta1_grad = (1/m)*(delta_2'*a1);
